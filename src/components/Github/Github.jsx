@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useLoaderData } from 'react-router-dom'
 
 function Github() {
+  // data is coming from the  loader using the  below hooks
     const data = useLoaderData()
     // const [data, setData] = useState([])
     // useEffect(() => {
@@ -21,7 +22,7 @@ function Github() {
 }
 
 export default Github
-
+// some optimaizations 
 export const githubInfoLoader = async () => {
     const response = await fetch('https://api.github.com/users/Abhishekkumar-7050')
     return response.json()
